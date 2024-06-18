@@ -1,0 +1,4 @@
+[submodule "sml-tpcds-common"]
+	path = sml-tpcds-common
+	url = https://github.com/muellermarco/sml-tpcds-common.git
+	branch = main
