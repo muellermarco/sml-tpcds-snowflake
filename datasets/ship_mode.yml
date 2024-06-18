@@ -1,7 +1,7 @@
 unique_name: ship_mode
 object_type: dataset
 label: ship_mode
-connection_id: Databricks
+connection_id: Snowflake
 table: ship_mode
 
 columns:

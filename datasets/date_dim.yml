@@ -1,7 +1,7 @@
 unique_name: date_dim
 object_type: dataset
 label: date_dim
-connection_id: Databricks
+connection_id: Snowflake
 table: date_dim
 
 columns:
