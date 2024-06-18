@@ -1,0 +1,8 @@
+unique_name: Snowflake
+object_type: connection
+as_connection: Snowflake
+label: Snowflake
+db_type: snowflake
+database: SE_DEMO_LIBRARY
+schema: AS_ADVENTURE
+override: true
