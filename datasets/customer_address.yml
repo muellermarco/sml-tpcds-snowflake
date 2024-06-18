@@ -2,7 +2,7 @@ unique_name: customer_address
 object_type: dataset
 label: customer_address
 connection_id: Snowflake
-table: customer_address
+table: CUSTOMER_ADDRESS
 
 columns:
   - name: CA_ADDRESS_ID

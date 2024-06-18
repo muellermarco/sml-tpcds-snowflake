@@ -1,6 +1,6 @@
 unique_name: Snowflake
 object_type: connection
-as_connection: Snowflake
+as_connection: snowflake
 label: Snowflake
 db_type: snowflake
 database: SE_DEMO_LIBRARY

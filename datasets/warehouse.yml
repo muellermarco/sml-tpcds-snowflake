@@ -1,9 +1,6 @@
 unique_name: warehouse
 object_type: dataset
 label: warehouse
-connection_id: Snowflake
-table: warehouse
-
 columns:
   - name: W_CITY
     data_type: string
@@ -12,7 +9,7 @@ columns:
   - name: W_COUNTY
     data_type: string
   - name: W_GMT_OFFSET
-    data_type: "decimal(38,9)"
+    data_type: decimal(5,2)
   - name: W_STATE
     data_type: string
   - name: W_STREET_NAME
@@ -28,8 +25,10 @@ columns:
   - name: W_WAREHOUSE_NAME
     data_type: string
   - name: W_WAREHOUSE_SK
-    data_type: long
+    data_type: decimal(38,0)
   - name: W_WAREHOUSE_SQ_FT
-    data_type: long
+    data_type: decimal(38,0)
   - name: W_ZIP
     data_type: string
+connection_id: Snowflake
+table: WAREHOUSE
