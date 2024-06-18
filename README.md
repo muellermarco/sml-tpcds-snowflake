@@ -1,1 +1,1 @@
-# sml_tpcds_databricks
+# sml_tpcds_Snowflake

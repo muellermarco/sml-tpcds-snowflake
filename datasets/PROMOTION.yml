@@ -1,7 +1,7 @@
 unique_name: PROMOTION
 object_type: dataset
 label: PROMOTION
-connection_id: Databricks
+connection_id: Snowflake
 table: promotion
 
 columns:
