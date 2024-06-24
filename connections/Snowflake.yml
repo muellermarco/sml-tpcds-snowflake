@@ -4,5 +4,5 @@ as_connection: snowflake
 label: Snowflake
 db_type: snowflake
 database: SE_DEMO_LIBRARY
-schema: AS_ADVENTURE
+schema: TPCDS_10TB
 override: true
