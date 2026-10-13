@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "15d691f44fc8df51aad7",
+  "position": {
+    "x": 1280,
+    "y": 120,
+    "z": 4,
+    "height": 525,
+    "width": 600,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Aggregates and performance",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The model declares one user-defined aggregate, 'customer sales' (Customer Demographics by Store Quantity Sold). Speculative aggregates and aggressive promotion are off in catalog.yml, so the engine builds system aggregates from the query log; the first query against a new cut goes to Snowflake and later ones hit the aggregate. The row-count limit for the aggregate store is ten million rows.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Things to know when reading the numbers",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "TPC-DS is a synthetic benchmark: distributions are deliberately uniform, net profit is negative and the last year (2003) is partial. Measures use 'unrelated dimensions handling: empty', so a store measure on a warehouse axis is blank rather than repeated. Customer Count and the row counters count fact rows, not distinct customers. Store Sales Price sums unit prices and Web Sales multiplies the extended price by quantity a second time, so neither is a revenue figure; compare channels with Net Paid or Purchased Amount, which are defined the same way on both facts.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

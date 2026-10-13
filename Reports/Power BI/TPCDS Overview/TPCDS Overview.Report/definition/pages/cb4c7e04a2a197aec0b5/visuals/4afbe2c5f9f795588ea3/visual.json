@@ -1,0 +1,164 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "4afbe2c5f9f795588ea3",
+  "position": {
+    "x": 1280,
+    "y": 265,
+    "z": 10,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Month"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Month",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Month"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ss_quantity_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ss_quantity_sum",
+              "nativeQueryRef": "m_ss_quantity_sum",
+              "displayName": "Store quantity"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_quantity_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_quantity_sum",
+              "nativeQueryRef": "m_ws_quantity_sum",
+              "displayName": "Web quantity"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Sold Date Dimension"
+                      }
+                    },
+                    "Hierarchy": "Sold Date Dimension"
+                  }
+                },
+                "Level": "Sold Calendar Month"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Units sold per month, store against web'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

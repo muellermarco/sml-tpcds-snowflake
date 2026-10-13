@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "e6af3d172073746ef414",
+  "position": {
+    "x": 40,
+    "y": 20,
+    "z": 1,
+    "height": 90,
+    "width": 1840,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "TPC-DS on Snowflake: store and web sales through one AtScale model",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DemoModel joins two TPC-DS fact tables, store_sales and web_sales, to conformed Product, Customer, Customer Demographics, Promotions and a role-played Date dimension (Sold and Ship). Every chart here is a live query against Snowflake through the semantic layer; the 'Total' measures add the two channels so a single figure covers both.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

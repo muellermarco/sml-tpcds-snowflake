@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "257ddb62d11159d34b18",
+  "position": {
+    "x": 1435,
+    "y": 665,
+    "z": 15,
+    "height": 380,
+    "width": 445,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Reading the page",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customer Count is the sum of two row counts, store and web, not a distinct count of people; it is a counting measure for row volume and the card label says so. Gender and credit rating split sales almost evenly, again by construction of the generator, which makes them good slicers for checking that every visual re-queries consistently. Promotions are keyed by surrogate; the name and channel flags are secondary attributes on the leaf level. No promotion in this dataset has the discount-active flag set to Y, so the flag chart shows one N bar plus a blank member for the 1.4 percent of lines whose promotion key matches nothing: that blank member is how the model surfaces referential gaps rather than dropping the rows.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Model capabilities: a snowflaked customer dimension, secondary attributes bound directly as columns (gender, credit rating, preferred flag, promotion name and channel flags), slicers on a non-hierarchy attribute, and a matrix that pivots one attribute against another.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

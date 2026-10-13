@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "507fa1c2a1ff30e7ee1b",
+  "position": {
+    "x": 40,
+    "y": 20,
+    "z": 1,
+    "height": 90,
+    "width": 1840,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "How DemoModel is built: SML, a shared package and CI/CD to Snowflake",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "This page describes the model behind the report. It is maintained as Semantic Modeling Language (SML) YAML in the sml-tpcds-snowflake repository, pulls shared objects from the sml-tpcds-common package at a pinned commit, and is deployed to the TPCDS-MM-Snowflake catalog by the AtScale CI/CD pipeline. The two charts show the same web net paid once by Sold Date and once by Ship Date.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

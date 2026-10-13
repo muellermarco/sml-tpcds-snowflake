@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "f383d5980d9dda29c2de",
+  "position": {
+    "x": 40,
+    "y": 20,
+    "z": 1,
+    "height": 90,
+    "width": 1840,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Web channel: fulfilment, shipping and the cost stack",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "web_sales is the only fact that joins Fulfilling Warehouse and Ship Mode, and it carries two dates: the Sold Date and the Ship Date are the same Date Dimension role-played twice. Warehouse and ship-mode cuts therefore only ever show web figures; store measures return blank there, which is the model's unrelated-dimension handling at work.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

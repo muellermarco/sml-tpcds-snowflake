@@ -1,0 +1,68 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "4b9582fa5e145b83a979",
+  "position": {
+    "x": 40,
+    "y": 120,
+    "z": 2,
+    "height": 525,
+    "width": 600,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Facts and grain",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "store_sales: one row per store sales line (SS_*), joined to Store, Product, Customer, Customer Demographics, Promotions and the Sold Date. web_sales: one row per web sales line (WS_*), joined to Product, Customer, Customer Demographics, Promotions, Ship Mode, Fulfilling Warehouse and both Sold and Ship dates. Both datasets add calculated columns in SQL: Purchased Amount, a row counter and price tiers.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Dimensions",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Date Dimension (Year > Quarter > Month > Date, with Month of Year and Month Sequence) is role-played as Sold and Ship. Product (Category > Class > Brand > Item, plus color and size). Store (Country > State > County > City > Store, plus name, floor space, employees). Customer (Country > State > County > City > Customer, snowflaked over customer_address, plus the preferred flag). Customer Demographics (gender, credit rating). Promotions (Discount Active > Promotion, plus name and five channel flags). Ship Mode (Mode > Type > Carrier). Fulfilling Warehouse (Country > State > County > City > ID > Warehouse).",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

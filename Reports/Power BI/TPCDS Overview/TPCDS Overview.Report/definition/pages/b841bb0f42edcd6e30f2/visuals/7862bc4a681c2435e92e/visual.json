@@ -1,0 +1,154 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "7862bc4a681c2435e92e",
+  "position": {
+    "x": 505,
+    "y": 665,
+    "z": 14,
+    "height": 380,
+    "width": 910,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Promotions"
+                    }
+                  },
+                  "Property": "d_promo_name"
+                }
+              },
+              "queryRef": "Promotions.d_promo_name",
+              "nativeQueryRef": "d_promo_name",
+              "displayName": "Promotion"
+            }
+          ]
+        },
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Promotions"
+                    }
+                  },
+                  "Property": "d_channel_tv"
+                }
+              },
+              "queryRef": "Promotions.d_channel_tv",
+              "nativeQueryRef": "d_channel_tv",
+              "displayName": "TV"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_store_sales_price"
+                }
+              },
+              "queryRef": "CubeMeasures.m_store_sales_price",
+              "nativeQueryRef": "m_store_sales_price",
+              "displayName": "Store sales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_web_sales_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_web_sales_sum",
+              "nativeQueryRef": "m_web_sales_sum",
+              "displayName": "Web sales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_store_coupon_amt_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_store_coupon_amt_sum",
+              "nativeQueryRef": "m_store_coupon_amt_sum",
+              "displayName": "Coupons"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "CubeMeasures"
+                  }
+                },
+                "Property": "m_store_sales_price"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Promotions by name, split by the TV channel flag'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

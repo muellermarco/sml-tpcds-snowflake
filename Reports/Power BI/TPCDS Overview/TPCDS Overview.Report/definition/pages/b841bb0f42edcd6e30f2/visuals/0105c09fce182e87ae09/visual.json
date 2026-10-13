@@ -1,0 +1,142 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "0105c09fce182e87ae09",
+  "position": {
+    "x": 40,
+    "y": 665,
+    "z": 13,
+    "height": 380,
+    "width": 445,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Promotions"
+                        }
+                      },
+                      "Hierarchy": "Promotions"
+                    }
+                  },
+                  "Level": "Promo Active Indicator"
+                }
+              },
+              "queryRef": "Promotions.Promotions.Promo Active Indicator",
+              "nativeQueryRef": "Promotions Promo Active Indicator",
+              "displayName": "Discount active"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ss_net_paid_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ss_net_paid_sum",
+              "nativeQueryRef": "m_ss_net_paid_sum",
+              "displayName": "Store net paid"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_net_paid_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_net_paid_sum",
+              "nativeQueryRef": "m_ws_net_paid_sum",
+              "displayName": "Web net paid"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Net paid by promotion discount-active flag (no promotion in the data has it set)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

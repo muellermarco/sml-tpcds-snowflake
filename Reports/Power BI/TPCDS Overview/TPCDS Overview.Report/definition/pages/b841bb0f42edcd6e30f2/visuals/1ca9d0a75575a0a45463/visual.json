@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "1ca9d0a75575a0a45463",
+  "position": {
+    "x": 40,
+    "y": 20,
+    "z": 1,
+    "height": 90,
+    "width": 1840,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Who buys, and what the promotions do",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Customer Dimension is snowflaked over customer and customer_address (Country > State > County > City > Customer), Customer Demographics carries gender and credit rating as secondary attributes, and both facts join both. Promotions exposes the channel flags and the discount-active indicator. Use the two slicers to cut every visual by gender and credit rating.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

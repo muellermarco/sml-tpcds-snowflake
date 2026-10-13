@@ -1,0 +1,5 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/semanticModel/modelReference/2.0.0/schema.json",
+  "connectionString": "Data Source=https://prod.atscale-se-demo.com/engine/xmla/m/f6767255-d412-5d56-a09e-86126e1a2b6a/5a2g6z4sddbd_pwdhybjng;Initial Catalog=TPCDS-MM-Snowflake_main;Cube=DemoModel",
+  "connectionType": "analysisServicesDatabaseLive"
+}

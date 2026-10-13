@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "846aac15d3587a1e88f3",
+  "position": {
+    "x": 660,
+    "y": 265,
+    "z": 10,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ship Mode"
+                        }
+                      },
+                      "Hierarchy": "Ship Mode"
+                    }
+                  },
+                  "Level": "Ship Mode Type"
+                }
+              },
+              "queryRef": "Ship Mode.Ship Mode.Ship Mode Type",
+              "nativeQueryRef": "Ship Mode Ship Mode Type",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ship Mode"
+                        }
+                      },
+                      "Hierarchy": "Ship Mode"
+                    }
+                  },
+                  "Level": "Carrier"
+                }
+              },
+              "queryRef": "Ship Mode.Ship Mode.Carrier",
+              "nativeQueryRef": "Ship Mode Carrier",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_net_paid_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_net_paid_sum",
+              "nativeQueryRef": "m_ws_net_paid_sum",
+              "displayName": "Web net paid"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_ext_ship_cost_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_ext_ship_cost_sum",
+              "nativeQueryRef": "m_ws_ext_ship_cost_sum",
+              "displayName": "Ship cost"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "CubeMeasures"
+                  }
+                },
+                "Property": "m_ws_net_paid_sum"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Web net paid and shipping cost by ship mode type (drill to carrier)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

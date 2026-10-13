@@ -1,0 +1,173 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "327a73751be160c635ea",
+  "position": {
+    "x": 1280,
+    "y": 265,
+    "z": 11,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fulfilling Warehouse"
+                        }
+                      },
+                      "Hierarchy": "Fulfilling Warehouse"
+                    }
+                  },
+                  "Level": "Warehouse State"
+                }
+              },
+              "queryRef": "Fulfilling Warehouse.Fulfilling Warehouse.Warehouse State",
+              "nativeQueryRef": "Fulfilling Warehouse Warehouse State",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Fulfilling Warehouse"
+                        }
+                      },
+                      "Hierarchy": "Fulfilling Warehouse"
+                    }
+                  },
+                  "Level": "Warehouse City"
+                }
+              },
+              "queryRef": "Fulfilling Warehouse.Fulfilling Warehouse.Warehouse City",
+              "nativeQueryRef": "Fulfilling Warehouse Warehouse City",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fulfilling Warehouse"
+                    }
+                  },
+                  "Property": "d_warehouse_name"
+                }
+              },
+              "queryRef": "Fulfilling Warehouse.d_warehouse_name",
+              "nativeQueryRef": "d_warehouse_name",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_net_paid_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_net_paid_sum",
+              "nativeQueryRef": "m_ws_net_paid_sum",
+              "displayName": "Web net paid"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "CubeMeasures"
+                  }
+                },
+                "Property": "m_ws_net_paid_sum"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Web net paid by fulfilling warehouse state (drill to city and warehouse)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

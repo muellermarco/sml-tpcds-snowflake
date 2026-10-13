@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "6ccc6bfce8ed95a9b9a5",
+  "position": {
+    "x": 1280,
+    "y": 665,
+    "z": 13,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Reading the page",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "The web channel is about a quarter of the store channel by units and purchased amount, loses a third as much per unit (5.1 against 16.4), and carries costs the store channel does not record: shipping and a separate discount line. The Web Sales measure is left off this page on purpose: its column multiplies the extended sales price by quantity a second time, so it runs about a thousand times the comparable store figure; Web Net Paid is the revenue measure here. Ship mode types split web sales almost evenly, because the generator assigns modes at random; the point of the chart is that the Ship Mode and Warehouse dimensions resolve only through web_sales. Switch the trend chart to the Ship Date hierarchy in the field list to see the same sales shifted by the shipping lag.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Model capabilities: a role-played date (Sold and Ship) from one dimension, dimensions reachable from one fact only, per-unit calcs (Average Web Unit Net Profit), and a table that lines up the base measures the calculations are built from.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

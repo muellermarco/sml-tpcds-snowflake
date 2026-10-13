@@ -1,0 +1,216 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "9cd1337669579255def6",
+  "position": {
+    "x": 39.183673469387749,
+    "y": 58.775510204081627,
+    "z": 0,
+    "height": 517.55102040816325,
+    "width": 698.77551020408157,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Year"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Year",
+              "nativeQueryRef": "Sold Date Month Hierarchy Sold Calendar Year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Quarter"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Quarter",
+              "nativeQueryRef": "Sold Date Month Hierarchy Sold Calendar Quarter",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Month"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Month",
+              "nativeQueryRef": "Sold Date Month Hierarchy Sold Calendar Month",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Time Dimension"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Time Dimension",
+              "nativeQueryRef": "Sold Date Month Hierarchy Sold Date",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "Total Net Profit"
+                }
+              },
+              "queryRef": "CubeMeasures.Total Net Profit",
+              "nativeQueryRef": "Total Net Profit"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a91725e3b4b0c92b8ce5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CubeMeasures"
+              }
+            },
+            "Property": "Total Net Profit"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "56617c7d53c47a6d4669",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sold Date Dimension"
+                  }
+                },
+                "Hierarchy": "Sold Date Dimension"
+              }
+            },
+            "Level": "Sold Calendar Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "afa5e8f1629f3e7fa172",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sold Date Dimension"
+                  }
+                },
+                "Hierarchy": "Sold Date Dimension"
+              }
+            },
+            "Level": "Sold Calendar Quarter"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "51c95057d742d4ee861e",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sold Date Dimension"
+                  }
+                },
+                "Hierarchy": "Sold Date Dimension"
+              }
+            },
+            "Level": "Sold Calendar Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a9f5b7fede25fdfbbca7",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Sold Date Dimension"
+                  }
+                },
+                "Hierarchy": "Sold Date Dimension"
+              }
+            },
+            "Level": "Sold Time Dimension"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

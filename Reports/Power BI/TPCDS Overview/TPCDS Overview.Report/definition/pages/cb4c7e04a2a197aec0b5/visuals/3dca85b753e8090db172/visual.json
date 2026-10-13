@@ -1,0 +1,205 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "3dca85b753e8090db172",
+  "position": {
+    "x": 40,
+    "y": 265,
+    "z": 8,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Year"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Year",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Quarter"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Quarter",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Quarter",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Month"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Month",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Month",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ss_net_profit_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ss_net_profit_sum",
+              "nativeQueryRef": "m_ss_net_profit_sum",
+              "displayName": "Store net profit"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_net_profit_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_net_profit_sum",
+              "nativeQueryRef": "m_ws_net_profit_sum",
+              "displayName": "Web net profit"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Sold Date Dimension"
+                      }
+                    },
+                    "Hierarchy": "Sold Date Dimension"
+                  }
+                },
+                "Level": "Sold Calendar Year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Net profit by sold year, store against web (drill to quarter and month)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

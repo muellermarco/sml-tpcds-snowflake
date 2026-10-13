@@ -1,0 +1,349 @@
+{
+ "contents": {
+  "schemaVersion": 1,
+  "kind": "workbook",
+  "pages": [
+   {
+    "id": "pgOverview1",
+    "name": "Overview"
+   },
+   {
+    "id": "pgData00001",
+    "name": "Data"
+   }
+  ],
+  "elements": [
+   {
+    "id": "txtHeader01",
+    "kind": "text",
+    "body": "# TPC-DS Store Sales Overview\nLive on the AtScale semantic layer \u00b7 catalog **TPCDS-MM-Snowflake** \u00b7 model **DemoModel** \u00b7 connection *AtScale CICD PROD* (Postgres wire)"
+   },
+   {
+    "id": "kpiNetPaid1",
+    "kind": "kpi-chart",
+    "title": "Net Paid (Store)",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "kpiNetPaid1v",
+      "formula": "Sum([DemoModel/m_ss_net_paid_sum])",
+      "name": "Net Paid (Store)"
+     }
+    ],
+    "value": {
+     "columnId": "kpiNetPaid1v"
+    }
+   },
+   {
+    "id": "kpiProfit01",
+    "kind": "kpi-chart",
+    "title": "Net Profit (Store)",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "kpiProfit01v",
+      "formula": "Sum([DemoModel/m_ss_net_profit_sum])",
+      "name": "Net Profit (Store)"
+     }
+    ],
+    "value": {
+     "columnId": "kpiProfit01v"
+    }
+   },
+   {
+    "id": "kpiQty0001",
+    "kind": "kpi-chart",
+    "title": "Units Sold (Store)",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "kpiQty0001v",
+      "formula": "Sum([DemoModel/m_ss_quantity_sum])",
+      "name": "Units Sold (Store)"
+     }
+    ],
+    "value": {
+     "columnId": "kpiQty0001v"
+    }
+   },
+   {
+    "id": "kpiRows0001",
+    "kind": "kpi-chart",
+    "title": "Store Transactions",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "kpiRows0001v",
+      "formula": "Sum([DemoModel/m_SS Row Counter_sum])",
+      "name": "Store Transactions"
+     }
+    ],
+    "value": {
+     "columnId": "kpiRows0001v"
+    }
+   },
+   {
+    "id": "lineMonth01",
+    "kind": "line-chart",
+    "title": "Store Net Paid by Month",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "lmx",
+      "formula": "[DemoModel/Sold Calendar Month]",
+      "name": "Month"
+     },
+     {
+      "id": "lmy",
+      "formula": "Sum([DemoModel/m_ss_net_paid_sum])",
+      "name": "Net Paid"
+     }
+    ],
+    "xAxis": {
+     "columnId": "lmx"
+    },
+    "yAxis": {
+     "columnIds": [
+      "lmy"
+     ]
+    }
+   },
+   {
+    "id": "barState001",
+    "kind": "bar-chart",
+    "title": "Net Paid by Store State",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "bsx",
+      "formula": "[DemoModel/d_store_state]",
+      "name": "Store State"
+     },
+     {
+      "id": "bsy",
+      "formula": "Sum([DemoModel/m_ss_net_paid_sum])",
+      "name": "Net Paid"
+     }
+    ],
+    "xAxis": {
+     "columnId": "bsx"
+    },
+    "yAxis": {
+     "columnIds": [
+      "bsy"
+     ]
+    }
+   },
+   {
+    "id": "barCateg001",
+    "kind": "bar-chart",
+    "title": "Net Profit by Product Category",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "bcx",
+      "formula": "[DemoModel/I Category]",
+      "name": "Category"
+     },
+     {
+      "id": "bcy",
+      "formula": "Sum([DemoModel/m_ss_net_profit_sum])",
+      "name": "Net Profit"
+     }
+    ],
+    "xAxis": {
+     "columnId": "bcx"
+    },
+    "yAxis": {
+     "columnIds": [
+      "bcy"
+     ]
+    }
+   },
+   {
+    "id": "tblBrands01",
+    "kind": "table",
+    "title": "Brands by Net Paid (highest first)",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "tbb",
+      "formula": "[DemoModel/Product Brand]",
+      "name": "Brand"
+     },
+     {
+      "id": "tbc",
+      "formula": "[DemoModel/I Category]",
+      "name": "Category"
+     },
+     {
+      "id": "tbp",
+      "formula": "Sum([DemoModel/m_ss_net_paid_sum])",
+      "name": "Net Paid"
+     },
+     {
+      "id": "tbq",
+      "formula": "Sum([DemoModel/m_ss_quantity_sum])",
+      "name": "Units"
+     },
+     {
+      "id": "tbn",
+      "formula": "Sum([DemoModel/m_ss_net_profit_sum])",
+      "name": "Net Profit"
+     }
+    ],
+    "order": [
+     "tbb",
+     "tbc",
+     "tbp",
+     "tbq",
+     "tbn"
+    ],
+    "groupBy": [
+     {
+      "columnId": "tbb"
+     },
+     {
+      "columnId": "tbc"
+     }
+    ],
+    "sorts": [
+     {
+      "columnId": "tbp",
+      "direction": "descending"
+     }
+    ]
+   },
+   {
+    "id": "tblBaseSS01",
+    "kind": "table",
+    "title": "Store Sales by Year / State / Category (AtScale DemoModel)",
+    "source": {
+     "connectionId": "66baa26c-c31a-4bf2-bd09-94801ec60ef6",
+     "kind": "warehouse-table",
+     "path": [
+      "TPCDS-MM-Snowflake_main",
+      "DemoModel"
+     ]
+    },
+    "columns": [
+     {
+      "id": "b00",
+      "formula": "[DemoModel/Sold Calendar Year]"
+     },
+     {
+      "id": "b01",
+      "formula": "[DemoModel/d_store_state]"
+     },
+     {
+      "id": "b02",
+      "formula": "[DemoModel/I Category]"
+     },
+     {
+      "id": "m00",
+      "formula": "Sum([DemoModel/m_ss_net_paid_sum])",
+      "name": "Net Paid"
+     },
+     {
+      "id": "m01",
+      "formula": "Sum([DemoModel/m_ss_net_profit_sum])",
+      "name": "Net Profit"
+     },
+     {
+      "id": "m02",
+      "formula": "Sum([DemoModel/m_ss_quantity_sum])",
+      "name": "Units"
+     },
+     {
+      "id": "m03",
+      "formula": "Sum([DemoModel/m_SS Row Counter_sum])",
+      "name": "Transactions"
+     }
+    ],
+    "order": [
+     "b00",
+     "b01",
+     "b02",
+     "m00",
+     "m01",
+     "m02",
+     "m03"
+    ],
+    "groupBy": [
+     {
+      "columnId": "b00"
+     },
+     {
+      "columnId": "b01"
+     },
+     {
+      "columnId": "b02"
+     }
+    ],
+    "sorts": [
+     {
+      "columnId": "b00",
+      "direction": "ascending"
+     }
+    ]
+   }
+  ],
+  "layout": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<Page type=\"grid\" gridTemplateColumns=\"repeat(24, 1fr)\" gridTemplateRows=\"auto\" id=\"pgOverview1\">\n  <Element elementId=\"txtHeader01\" gridColumn=\"1 / 25\" gridRow=\"1 / 4\"/>\n  <Element elementId=\"kpiNetPaid1\" gridColumn=\"1 / 7\" gridRow=\"4 / 10\"/>\n  <Element elementId=\"kpiProfit01\" gridColumn=\"7 / 13\" gridRow=\"4 / 10\"/>\n  <Element elementId=\"kpiQty0001\" gridColumn=\"13 / 19\" gridRow=\"4 / 10\"/>\n  <Element elementId=\"kpiRows0001\" gridColumn=\"19 / 25\" gridRow=\"4 / 10\"/>\n  <Element elementId=\"lineMonth01\" gridColumn=\"1 / 25\" gridRow=\"10 / 24\"/>\n  <Element elementId=\"barState001\" gridColumn=\"1 / 13\" gridRow=\"24 / 38\"/>\n  <Element elementId=\"barCateg001\" gridColumn=\"13 / 25\" gridRow=\"24 / 38\"/>\n  <Element elementId=\"tblBrands01\" gridColumn=\"1 / 25\" gridRow=\"38 / 54\"/>\n</Page>\n<Page type=\"grid\" gridTemplateColumns=\"repeat(24, 1fr)\" gridTemplateRows=\"auto\" id=\"pgData00001\">\n  <Element elementId=\"tblBaseSS01\" gridColumn=\"1 / 25\" gridRow=\"1 / 41\"/>\n</Page>"
+ }
+}

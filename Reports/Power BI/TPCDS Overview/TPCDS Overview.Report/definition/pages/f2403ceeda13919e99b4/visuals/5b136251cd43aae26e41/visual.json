@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "5b136251cd43aae26e41",
+  "position": {
+    "x": 1280,
+    "y": 665,
+    "z": 13,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Reading the page",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Store Sales Price sums the unit sales price of every line, so it is a price total rather than revenue; Store Net Paid is what the customer paid and is the revenue measure on the cards and bars. Stores sit in 36 US states and the volume follows how many stores the generator placed in each: Georgia carries about nine percent of store sales, then Texas, Michigan, New Mexico and Nebraska, while a dozen states carry under one percent. Net profit per unit is 16.4 below zero in every state to within a few cents, so the ranking by net paid and by net loss is the same. Store Revenue Ratio by Product Class divides each product member's sales by the All member, so the bars sum to one at category level and the drill to class shows the share inside each category.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Model capabilities: a five-level geographic hierarchy with the store name as a secondary attribute, a previous-member calc (Store Sales Increase) that follows the drill grain, a ratio-to-All calc that stays correct at every cut, and a page slicer the model honours.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "bf8ae40efc7f405ced97",
+  "position": {
+    "x": 660,
+    "y": 265,
+    "z": 10,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "lineClusteredColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Year"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Year",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Quarter"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Quarter",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Quarter",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Month"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Month",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Month",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_store_sales_price"
+                }
+              },
+              "queryRef": "CubeMeasures.m_store_sales_price",
+              "nativeQueryRef": "m_store_sales_price",
+              "displayName": "Store sales price (sum)"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "Store Sales Increase"
+                }
+              },
+              "queryRef": "CubeMeasures.Store Sales Increase",
+              "nativeQueryRef": "Store Sales Increase",
+              "displayName": "Ratio to previous period"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Sold Date Dimension"
+                      }
+                    },
+                    "Hierarchy": "Sold Date Dimension"
+                  }
+                },
+                "Level": "Sold Calendar Year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Store Sales Price per period (columns) and Store Sales Increase, its ratio to the previous period (line)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

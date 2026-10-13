@@ -1,0 +1,158 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "6d64459bd75759d71a8e",
+  "position": {
+    "x": 1280,
+    "y": 265,
+    "z": 11,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product Dimension"
+                        }
+                      },
+                      "Hierarchy": "Product Dimension"
+                    }
+                  },
+                  "Level": "I Category"
+                }
+              },
+              "queryRef": "Product Dimension.Product Dimension.I Category",
+              "nativeQueryRef": "Product Dimension I Category",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product Dimension"
+                        }
+                      },
+                      "Hierarchy": "Product Dimension"
+                    }
+                  },
+                  "Level": "Product Class"
+                }
+              },
+              "queryRef": "Product Dimension.Product Dimension.Product Class",
+              "nativeQueryRef": "Product Dimension Product Class",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "Store Revenue Ratio by Product Class"
+                }
+              },
+              "queryRef": "CubeMeasures.Store Revenue Ratio by Product Class",
+              "nativeQueryRef": "Store Revenue Ratio by Product Class",
+              "displayName": "Share of store sales"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "CubeMeasures"
+                  }
+                },
+                "Property": "Store Revenue Ratio by Product Class"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Share of store sales by product category (drill to class): a ratio against the All product member'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

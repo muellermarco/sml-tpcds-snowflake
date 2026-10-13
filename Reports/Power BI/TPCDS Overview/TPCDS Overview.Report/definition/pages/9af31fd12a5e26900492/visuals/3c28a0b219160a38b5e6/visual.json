@@ -1,0 +1,183 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "3c28a0b219160a38b5e6",
+  "position": {
+    "x": 970,
+    "y": 665,
+    "z": 6,
+    "height": 380,
+    "width": 910,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ship Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Ship Date Dimension"
+                    }
+                  },
+                  "Level": "Ship Calendar Year"
+                }
+              },
+              "queryRef": "Ship Date Dimension.Ship Date Dimension.Ship Calendar Year",
+              "nativeQueryRef": "Ship Date Dimension Ship Calendar Year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ship Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Ship Date Dimension"
+                    }
+                  },
+                  "Level": "Ship Calendar Quarter"
+                }
+              },
+              "queryRef": "Ship Date Dimension.Ship Date Dimension.Ship Calendar Quarter",
+              "nativeQueryRef": "Ship Date Dimension Ship Calendar Quarter",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Ship Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Ship Date Dimension"
+                    }
+                  },
+                  "Level": "Ship Calendar Month"
+                }
+              },
+              "queryRef": "Ship Date Dimension.Ship Date Dimension.Ship Calendar Month",
+              "nativeQueryRef": "Ship Date Dimension Ship Calendar Month",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "m_ws_net_paid_sum"
+                }
+              },
+              "queryRef": "CubeMeasures.m_ws_net_paid_sum",
+              "nativeQueryRef": "m_ws_net_paid_sum",
+              "displayName": "Web net paid"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Ship Date Dimension"
+                      }
+                    },
+                    "Hierarchy": "Ship Date Dimension"
+                  }
+                },
+                "Level": "Ship Calendar Year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'The same web net paid by Ship Date: the role-played copy of the Date dimension'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "d37c2fe11a01f398d2a0",
+  "position": {
+    "x": 1280,
+    "y": 665,
+    "z": 12,
+    "height": 380,
+    "width": 600,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Reading the page",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Six sold years are loaded, 1998 to 2003, and 2003 holds only the first weeks, so the trend charts fall off a cliff at the end. The TPC-DS generator produces negative net profit by design (wholesale cost exceeds the discounted sales price on most lines), so every profit figure is a loss; the shape across years, categories and channels is still meaningful. Store sales dominate: the store channel carries about four times the units and purchased amount of the web channel and about twelve times its net loss, because the loss per unit is 16.4 in store against 5.1 on the web. The ten product categories each take ten percent of sales to within a fraction of a point, so the category bars are a test of the drill (class and brand differ) rather than a ranking. The fact tables are large (28.8 billion store rows, 7.2 billion web rows), so a cold cut takes minutes until the aggregate for it exists.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Model capabilities on this page: two fact tables behind one measure set, calculated metrics that add store and web (Total Net Profit, Total Quantity Sold, Store and Web Purchased Amount), a role-played Sold Date hierarchy with drill from year to month, and a Product hierarchy shared by both facts.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "0faccaee13548010ac4d",
+  "position": {
+    "x": 970,
+    "y": 265,
+    "z": 11,
+    "height": 380,
+    "width": 445,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer Dimension"
+                        }
+                      },
+                      "Hierarchy": "Customer Dimension"
+                    }
+                  },
+                  "Level": "Customer State"
+                }
+              },
+              "queryRef": "Customer Dimension.Customer Dimension.Customer State",
+              "nativeQueryRef": "Customer Dimension Customer State",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer Dimension"
+                        }
+                      },
+                      "Hierarchy": "Customer Dimension"
+                    }
+                  },
+                  "Level": "Customer County"
+                }
+              },
+              "queryRef": "Customer Dimension.Customer Dimension.Customer County",
+              "nativeQueryRef": "Customer Dimension Customer County",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Customer Dimension"
+                        }
+                      },
+                      "Hierarchy": "Customer Dimension"
+                    }
+                  },
+                  "Level": "Customer City"
+                }
+              },
+              "queryRef": "Customer Dimension.Customer Dimension.Customer City",
+              "nativeQueryRef": "Customer Dimension Customer City",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CubeMeasures"
+                    }
+                  },
+                  "Property": "Store and Web Purchased Amount"
+                }
+              },
+              "queryRef": "CubeMeasures.Store and Web Purchased Amount",
+              "nativeQueryRef": "Store and Web Purchased Amount",
+              "displayName": "Purchased amount"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "CubeMeasures"
+                  }
+                },
+                "Property": "Store and Web Purchased Amount"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Purchased amount by customer state (drill to county and city)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "'12pt'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

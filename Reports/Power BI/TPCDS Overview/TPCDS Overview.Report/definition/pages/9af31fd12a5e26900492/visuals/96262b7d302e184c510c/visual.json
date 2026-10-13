@@ -1,0 +1,78 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "96262b7d302e184c510c",
+  "position": {
+    "x": 660,
+    "y": 120,
+    "z": 3,
+    "height": 525,
+    "width": 600,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Metrics and calculations",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Store Sales Measures: Store Sales Price, Store Net Profit, Store Quantity Sold, Store Net Paid (with and without tax), Average List and Sales Price, Coupon Amount, Purchased Amount In Store, Row Counter. Web Sales Measures: Web Sales, Web Net Profit, Web Quantity Sold, Net Paid (four variants), Discount, Ship Cost, Wholesale Cost, Purchased Amount On Web, Row Counter. Customer Information: Store and Web customer counts.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Calculated metrics (MDX): Total Net Profit, Total Quantity Sold and Store and Web Purchased Amount add the two channels; Avg Store Unit Net Profit and Average Web Unit Net Profit divide profit by quantity; Store Revenue Ratio by Product Class divides by the All product member; Store Sales Increase uses the previous member of the Sold Date hierarchy; Web Sales Increase uses ParallelPeriod on Sold Month of Year; Customer Count adds the two row counts.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Shared package and pipeline",
+                    "textStyle": {
+                      "fontSize": "13pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Date, Product and Customer dimensions, the quantity, net paid and net profit base metrics and the four Total/Avg calculations come from sml-tpcds-common (package.yml pins the commit). The repository is registered on the AtScale CI/CD pipeline as tpcds-snowflake; a merge to main validates with sml-cli and deploys the catalog, and this report binds to the deployed cube through the XMLA endpoint in the Seed project's connection.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

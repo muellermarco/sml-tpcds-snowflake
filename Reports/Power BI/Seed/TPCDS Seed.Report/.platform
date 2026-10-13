@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TPCDS Seed"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cc96e8e6-7cd8-48ed-8e5d-9a4afa154bff"
+  }
+}
