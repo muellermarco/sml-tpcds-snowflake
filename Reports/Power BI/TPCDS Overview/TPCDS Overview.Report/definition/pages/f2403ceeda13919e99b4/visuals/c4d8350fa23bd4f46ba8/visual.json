@@ -131,7 +131,6 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "labels": [
         {
@@ -188,6 +187,96 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "74115b1d85ad52711c48",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Store Dimension"
+                  }
+                },
+                "Hierarchy": "Store Dimension"
+              }
+            },
+            "Level": "d_store_state"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3d95fdc6d370b53c2676",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Store Dimension"
+                  }
+                },
+                "Hierarchy": "Store Dimension"
+              }
+            },
+            "Level": "d_store_county"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9bb112feca20d8f1f135",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Store Dimension"
+                  }
+                },
+                "Hierarchy": "Store Dimension"
+              }
+            },
+            "Level": "d_store_city"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "153395f2af9fb18946b2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Store Dimension"
+              }
+            },
+            "Property": "d_store_name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c0b8af44d3e7fcf25907",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CubeMeasures"
+              }
+            },
+            "Property": "m_ss_net_paid_sum"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

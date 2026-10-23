@@ -13,6 +13,30 @@
     "visualType": "pivotTable",
     "query": {
       "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Sold Date Dimension"
+                        }
+                      },
+                      "Hierarchy": "Sold Date Dimension"
+                    }
+                  },
+                  "Level": "Sold Calendar Year"
+                }
+              },
+              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Year",
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Year",
+              "active": true
+            }
+          ]
+        },
         "Rows": {
           "projections": [
             {
@@ -53,30 +77,7 @@
               },
               "queryRef": "Product Dimension.Product Dimension.Product Class",
               "nativeQueryRef": "Product Dimension Product Class",
-              "active": false
-            }
-          ]
-        },
-        "Columns": {
-          "projections": [
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Sold Date Dimension"
-                        }
-                      },
-                      "Hierarchy": "Sold Date Dimension"
-                    }
-                  },
-                  "Level": "Sold Calendar Year"
-                }
-              },
-              "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Year",
-              "nativeQueryRef": "Sold Date Dimension Sold Calendar Year"
+              "active": true
             }
           ]
         },
@@ -101,7 +102,65 @@
         }
       }
     },
-    "drillFilterOtherVisuals": true,
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Product Dimension.Product Dimension.I Category"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Product Dimension"
+                    }
+                  },
+                  "Property": "I Category"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Product Dimension.Product Dimension.Product Class"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Books'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Shoes'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "visualContainerObjects": {
       "title": [
         {
@@ -130,6 +189,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

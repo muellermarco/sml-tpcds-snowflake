@@ -13,25 +13,6 @@
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Promotions"
-                    }
-                  },
-                  "Property": "d_promo_name"
-                }
-              },
-              "queryRef": "Promotions.d_promo_name",
-              "nativeQueryRef": "d_promo_name",
-              "displayName": "Promotion"
-            }
-          ]
-        },
         "Columns": {
           "projections": [
             {
@@ -47,7 +28,28 @@
               },
               "queryRef": "Promotions.d_channel_tv",
               "nativeQueryRef": "d_channel_tv",
+              "active": true,
               "displayName": "TV"
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Promotions"
+                    }
+                  },
+                  "Property": "d_promo_name"
+                }
+              },
+              "queryRef": "Promotions.d_promo_name",
+              "nativeQueryRef": "d_promo_name",
+              "active": true,
+              "displayName": "Promotion"
             }
           ]
         },
@@ -120,7 +122,6 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true,
     "visualContainerObjects": {
       "title": [
         {
@@ -149,6 +150,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

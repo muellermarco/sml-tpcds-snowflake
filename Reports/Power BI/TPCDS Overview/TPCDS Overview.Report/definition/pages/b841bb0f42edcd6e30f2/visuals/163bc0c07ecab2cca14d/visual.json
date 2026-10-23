@@ -28,6 +28,7 @@
               },
               "queryRef": "Customer Demographics.d_cd_credit_rating",
               "nativeQueryRef": "d_cd_credit_rating",
+              "active": true,
               "displayName": "Credit rating"
             }
           ]
@@ -71,7 +72,6 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "labels": [
         {
@@ -128,6 +128,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }
