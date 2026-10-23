@@ -13,6 +13,30 @@
     "visualType": "pivotTable",
     "query": {
       "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Product Dimension"
+                        }
+                      },
+                      "Hierarchy": "Product Dimension"
+                    }
+                  },
+                  "Level": "I Category"
+                }
+              },
+              "queryRef": "Product Dimension.Product Dimension.I Category",
+              "nativeQueryRef": "Product Dimension I Category",
+              "active": true
+            }
+          ]
+        },
         "Rows": {
           "projections": [
             {
@@ -57,29 +81,6 @@
             }
           ]
         },
-        "Columns": {
-          "projections": [
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Product Dimension"
-                        }
-                      },
-                      "Hierarchy": "Product Dimension"
-                    }
-                  },
-                  "Level": "I Category"
-                }
-              },
-              "queryRef": "Product Dimension.Product Dimension.I Category",
-              "nativeQueryRef": "Product Dimension I Category"
-            }
-          ]
-        },
         "Values": {
           "projections": [
             {
@@ -101,7 +102,42 @@
         }
       }
     },
-    "drillFilterOtherVisuals": true,
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Store Dimension.Store Dimension.d_store_state"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Store Dimension"
+                    }
+                  },
+                  "Property": "d_store_state"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "Store Dimension.Store Dimension.d_store_city"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "visualContainerObjects": {
       "title": [
         {
@@ -130,6 +166,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

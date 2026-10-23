@@ -28,6 +28,7 @@
               },
               "queryRef": "Customer Demographics.d_cd_gender",
               "nativeQueryRef": "d_cd_gender",
+              "active": true,
               "displayName": "Gender"
             }
           ]
@@ -53,7 +54,6 @@
         }
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "labels": [
         {
@@ -104,6 +104,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Sold Date Dimension.Sold Date Dimension.Sold Calendar Month",
-              "nativeQueryRef": "Sold Date Dimension Sold Calendar Month"
+              "nativeQueryRef": "Sold Date Dimension Sold Calendar Month",
+              "active": true
             }
           ]
         },
@@ -95,7 +96,6 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "legend": [
         {
@@ -159,6 +159,7 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
   }
 }

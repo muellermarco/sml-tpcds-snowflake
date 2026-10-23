@@ -116,7 +116,6 @@
         "isDefaultSort": true
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "labels": [
         {
@@ -173,6 +172,82 @@
           }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8d16368bf139ca5e9a3f",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Product Dimension"
+                  }
+                },
+                "Hierarchy": "Product Dimension"
+              }
+            },
+            "Level": "I Category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "db4ba52bf3a9b9600605",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Product Dimension"
+                  }
+                },
+                "Hierarchy": "Product Dimension"
+              }
+            },
+            "Level": "Product Class"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b8d0d25ab68135143a1d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Product Dimension"
+                  }
+                },
+                "Hierarchy": "Product Dimension"
+              }
+            },
+            "Level": "Product Brand"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ea27e515c3def42fb503",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CubeMeasures"
+              }
+            },
+            "Property": "Store and Web Purchased Amount"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
